@@ -8,11 +8,10 @@ require_once __DIR__.'\loader\FileMap.php';
 // автоматическая загрузка классов, каждый вызов класса сопровождается подключением файла, где этот класс находится. Название файла совпадает с названием класса
 require_once __DIR__.'\loader\loader.php';
 
-// Считываем запрос со строки урл
-Request::url();
+
 
 // запуск контроллера
-(new controller)->controllers();
+(new Controller)->BaseController();
 
 // Замер времени выполнения скрипта
 $time_end = microtime(true);
